@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><?php echo $empresa['nome_fantasia']; ?> | Cybersecurity & Inteligência</title>
+  <title><?php echo $empresa['nome_fantasia']; ?> | Matriz São Luís-MA</title>
 
   <!-- Swiper CSS para o Slider -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -16,28 +15,27 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Consolas', 'Courier New', monospace, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
     :root {
-      --primary-color: #00ff66; /* Verde Matrix / Cyberpunk */
-      --secondary-color: #00b341;
-      --bg-dark: #0a0f0d;
-      --bg-card: #111a15;
-      --text-color: #e2e8f0;
-      --text-muted: #94a3b8;
+      --primary-color: #b91c1c; /* Vermelho forte / Setor alimentício */
+      --secondary-color: #d97706; /* Amarelo/Dourado caloroso */
+      --accent-color: #991b1b;
+      --text-color: #1f2937;
+      --bg-light: #fffbebfb;
       --white: #ffffff;
     }
 
     body {
-      background-color: var(--bg-dark);
+      background-color: var(--bg-light);
       color: var(--text-color);
       line-height: 1.6;
     }
 
     /* Cabeçalho / Navbar */
     header {
-      background-color: rgba(10, 15, 13, 0.95);
+      background-color: var(--white);
       color: var(--primary-color);
       padding: 1rem 5%;
       display: flex;
@@ -46,23 +44,20 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      border-bottom: 1px solid rgba(0, 255, 102, 0.2);
-      backdrop-filter: blur(5px);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     }
 
     .logo {
-      font-size: 1.4rem;
+      font-size: 1.3rem;
       font-weight: 700;
       display: flex;
       align-items: center;
       gap: 10px;
       color: var(--primary-color);
-      text-transform: uppercase;
-      letter-spacing: 2px;
     }
 
     .logo i {
-      color: var(--primary-color);
+      color: var(--secondary-color);
     }
 
     nav a {
@@ -80,7 +75,7 @@
     /* Swiper Slider */
     .swiper {
       width: 100%;
-      height: 65vh;
+      height: 60vh;
     }
 
     .swiper-slide {
@@ -98,7 +93,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(180deg, rgba(10,15,13,0.7) 0%, rgba(10,15,13,0.95) 100%);
+      background: rgba(17, 24, 39, 0.65);
     }
 
     .slide-content {
@@ -111,37 +106,30 @@
     }
 
     .slide-content h1 {
-      font-size: 2.8rem;
+      font-size: 2.5rem;
       margin-bottom: 0.8rem;
       font-weight: 700;
-      color: var(--primary-color);
-      text-shadow: 0 0 10px rgba(0,255,102,0.4);
     }
 
     .slide-content p {
       font-size: 1.2rem;
       margin-bottom: 1.5rem;
-      color: var(--text-muted);
+      color: #fef08a;
     }
 
     .btn {
       display: inline-block;
       padding: 0.8rem 1.8rem;
-      background-color: transparent;
-      color: var(--primary-color);
-      border: 1px solid var(--primary-color);
+      background-color: var(--primary-color);
+      color: var(--white);
       text-decoration: none;
-      border-radius: 4px;
+      border-radius: 6px;
       font-weight: 600;
-      transition: all 0.3s;
-      text-transform: uppercase;
-      letter-spacing: 1px;
+      transition: background 0.3s;
     }
 
     .btn:hover {
-      background-color: var(--primary-color);
-      color: var(--bg-dark);
-      box-shadow: 0 0 15px rgba(0,255,102,0.5);
+      background-color: var(--accent-color);
     }
 
     /* Seções e Grid */
@@ -156,16 +144,14 @@
       margin-bottom: 2rem;
       color: var(--primary-color);
       font-size: 1.8rem;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
     }
 
     .section-title::after {
       content: '';
       display: block;
-      width: 60px;
-      height: 2px;
-      background-color: var(--primary-color);
+      width: 50px;
+      height: 3px;
+      background-color: var(--secondary-color);
       margin: 8px auto 0;
     }
 
@@ -176,16 +162,16 @@
     }
 
     .info-card {
-      background: var(--bg-card);
+      background: var(--white);
       padding: 1.5rem;
-      border-radius: 6px;
-      border: 1px solid rgba(0, 255, 102, 0.15);
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.04);
       border-left: 4px solid var(--primary-color);
     }
 
     .info-card h3 {
       font-size: 0.85rem;
-      color: var(--text-muted);
+      color: #6b7280;
       text-transform: uppercase;
       margin-bottom: 0.3rem;
     }
@@ -193,16 +179,15 @@
     .info-card p {
       font-size: 1.05rem;
       font-weight: 600;
-      color: var(--white);
+      color: var(--primary-color);
     }
 
     .badge {
       display: inline-block;
-      background-color: rgba(0, 255, 102, 0.15);
-      color: var(--primary-color);
-      border: 1px solid var(--primary-color);
+      background-color: #dcfce7;
+      color: #15803d;
       padding: 0.2rem 0.6rem;
-      border-radius: 4px;
+      border-radius: 20px;
       font-size: 0.85rem;
       font-weight: bold;
     }
@@ -211,10 +196,10 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 2rem;
-      background: var(--bg-card);
+      background: var(--white);
       padding: 2.5rem;
-      border-radius: 6px;
-      border: 1px solid rgba(0, 255, 102, 0.15);
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.04);
     }
 
     .contact-item {
@@ -231,19 +216,18 @@
     }
 
     footer {
-      background-color: #050806;
-      color: var(--text-muted);
+      background-color: var(--primary-color);
+      color: var(--white);
       text-align: center;
       padding: 1.5rem;
       margin-top: 3rem;
       font-size: 0.9rem;
-      border-top: 1px solid rgba(0, 255, 102, 0.1);
     }
 
     @media (max-width: 768px) {
-      .slide-content h1 { font-size: 1.8rem; }
+      .slide-content h1 { font-size: 1.6rem; }
       .slide-content p { font-size: 1rem; }
-      .swiper { height: 50vh; }
+      .swiper { height: 45vh; }
     }
   </style>
 </head>
@@ -252,7 +236,7 @@
   <!-- Menu Cabeçalho -->
   <header>
     <div class="logo">
-      <i class="fa-solid fa-terminal"></i> <?php echo $empresa['nome_fantasia']; ?>
+      <i class="fa-solid fa-drumstick-bite"></i> <?php echo $empresa['nome_fantasia']; ?>
     </div>
     <nav>
       <a href="#inicio">Início</a>
@@ -261,41 +245,41 @@
     </nav>
   </header>
 
-  <!-- Slider de Fotos / Cyber Banner -->
+  <!-- Slider de Fotos -->
   <section id="inicio">
     <div class="swiper mySwiper">
       <div class="swiper-wrapper">
         
         <!-- Slide 1 -->
-        <div class="swiper-slide" style="background-image: url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=1200');">
+        <div class="swiper-slide" style="background-image: url('https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?q=80&w=1200');">
           <div class="slide-overlay"></div>
           <div class="slide-content">
-            <h1>&lt;<?php echo $empresa['nome_fantasia']; ?>/&gt;</h1>
-            <p>Segurança da Informação, Testes de Invasão & Proteção de Dados</p>
-            <a href="#contato" class="btn">Solicitar Análise</a>
+            <h1><?php echo $empresa['nome_fantasia']; ?></h1>
+            <p>Comércio e Distribuição de Frangos em São Luís / MA</p>
+            <a href="#contato" class="btn">Entre em Contato</a>
           </div>
         </div>
 
         <!-- Slide 2 -->
-        <div class="swiper-slide" style="background-image: url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1200');">
+        <div class="swiper-slide" style="background-image: url('https://images.unsplash.com/photo-1587593810167-a84920ea0781?q=80&w=1200');">
           <div class="slide-overlay"></div>
           <div class="slide-content">
-            <h1>Proteção & Cyber Defense</h1>
-            <p>Monitoramento contínuo e mitigação de vulnerabilidades</p>
+            <h1>Matriz São Raimundo</h1>
+            <p><?php echo $empresa['endereco']['logradouro']; ?> — <?php echo $empresa['endereco']['bairro']; ?></p>
             <a href="#registro" class="btn">Dados Cadastrais</a>
           </div>
         </div>
 
       </div>
-      <div class="swiper-button-next" style="color: var(--primary-color);"></div>
-      <div class="swiper-button-prev" style="color: var(--primary-color);"></div>
+      <div class="swiper-button-next" style="color: #fff;"></div>
+      <div class="swiper-button-prev" style="color: #fff;"></div>
       <div class="swiper-pagination"></div>
     </div>
   </section>
 
   <!-- Informações Cadastrais -->
   <section id="registro" class="container">
-    <h2 class="section-title">Informações da Organização</h2>
+    <h2 class="section-title">Informações Cadastrais</h2>
     
     <div class="info-grid">
       <div class="info-card">
@@ -314,18 +298,13 @@
       </div>
 
       <div class="info-card">
-        <h3>Status do Sistema</h3>
+        <h3>Situação Cadastral</h3>
         <p><span class="badge"><?php echo $empresa['situacao']; ?></span> (Desde <?php echo $empresa['data_abertura']; ?>)</p>
       </div>
 
       <div class="info-card">
         <h3>Porte</h3>
         <p><?php echo $empresa['porte']; ?></p>
-      </div>
-
-      <div class="info-card">
-        <h3>Segmento</h3>
-        <p><?php echo $empresa['ramo']; ?></p>
       </div>
 
       <div class="info-card">
@@ -342,11 +321,11 @@
 
   <!-- Localização e Contato -->
   <section id="contato" class="container">
-    <h2 class="section-title">Canais de Comunicação</h2>
+    <h2 class="section-title">Localização & Contato</h2>
 
     <div class="contact-container">
       <div>
-        <h3 style="margin-bottom: 1rem; color: var(--primary-color); text-transform: uppercase;">Contato Seguro</h3>
+        <h3 style="margin-bottom: 1rem; color: var(--primary-color);">Canais de Atendimento</h3>
         
         <div class="contact-item">
           <i class="fa-solid fa-envelope"></i>
@@ -359,17 +338,17 @@
         <div class="contact-item">
           <i class="fa-solid fa-phone"></i>
           <div>
-            <strong>Telefone:</strong><br>
+            <strong>Telefone / WhatsApp:</strong><br>
             <?php echo $empresa['telefone']; ?>
           </div>
         </div>
       </div>
 
       <div>
-        <h3 style="margin-bottom: 1rem; color: var(--primary-color); text-transform: uppercase;">Sede / Base</h3>
+        <h3 style="margin-bottom: 1rem; color: var(--primary-color);">Endereço da Matriz</h3>
         
         <div class="contact-item">
-          <i class="fa-solid fa-server"></i>
+          <i class="fa-solid fa-location-dot"></i>
           <div>
             <?php echo $empresa['razao_social']; ?><br>
             <?php echo $empresa['endereco']['logradouro']; ?><br>
@@ -383,7 +362,7 @@
 
   <!-- Rodapé -->
   <footer>
-    <p>&copy; <?php echo date('Y'); ?> <?php echo $empresa['nome_fantasia']; ?>. Todos os direitos reservados.</p>
+    <p>&copy; <?php echo date('Y'); ?> <?php echo $empresa['nome_fantasia']; ?> (CNPJ: <?php echo $empresa['cnpj']; ?>). Todos os direitos reservados.</p>
   </footer>
 
   <!-- Scripts do Slider Swiper -->
